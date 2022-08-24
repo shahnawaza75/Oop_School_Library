@@ -17,7 +17,7 @@ class Person
   end
 
   public
-  
+
   def correct_name
     @name
   end
