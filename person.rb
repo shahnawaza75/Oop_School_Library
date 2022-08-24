@@ -4,7 +4,6 @@ class Person
   attr_reader :id
 
 decorate-class
-  def initialize(age, name = 'Unknown', _parent_permission: true)
     super()
   def initialize(age, name = 'Unknown', parent_permission: true)
 
@@ -28,7 +27,7 @@ decorate-class
 
   def can_use_services?
     return true if is_of_age?
-=======
+
   def of_age?
     @age >= 18
   end
