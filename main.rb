@@ -1,9 +1,9 @@
-
 require './app'
 class Main
   def initialize
     @app = App.new
   end
+
   # rubocop:disable Metrics/CyclomaticComplexity
   def handle_input(option)
     case option
@@ -27,6 +27,7 @@ class Main
     end
     ui_input
   end
+
   # rubocop:enable Metrics/CyclomaticComplexity
   def ui_input
     puts 'Please choose an option by entering a number:'
@@ -40,10 +41,12 @@ class Main
     option = gets.chomp.to_i
     handle_input(option)
   end
+
   def run
     puts "Welcome to School Library App\n\n"
     ui_input
   end
+
   def main
     run
   end

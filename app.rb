@@ -8,6 +8,7 @@ class App
     @persons = []
     @rentals = []
   end
+
   def list_books
     puts "\nList of Books: "
     if @books.length.zero?
@@ -19,6 +20,7 @@ class App
     end
     puts "\n"
   end
+
   def list_persons
     puts "\nList of Persons: "
     if @persons.length.zero?
@@ -34,6 +36,7 @@ class App
     end
     puts "\n"
   end
+
   def create_student(age, name)
     print 'Parent Permission [y/n]: '
     parent_permission = gets.chomp
@@ -50,6 +53,7 @@ class App
     end
     @persons << student
   end
+
   def create_teacher(age, name)
     print 'Specialization: '
     specialization = gets.chomp
@@ -57,6 +61,7 @@ class App
     @persons << teacher
     puts "The Teacher is created successfuly\n\n"
   end
+
   def create_person
     print "\nDo you want to create Student (1) or Teacher (2)? [Input the number]: "
     person_type = gets.chomp.to_i
@@ -73,6 +78,7 @@ class App
       puts 'Invalid input! Type a valid input (1 or 2)'
     end
   end
+
   def create_book
     print "\nEnter a book title: "
     title = gets.chomp
@@ -81,6 +87,7 @@ class App
     @books.push(Book.new(title, author))
     puts "The book is created successfuly\n\n"
   end
+
   def create_rental
     print "\nSelect a book from the following list by number: "
     list_books
@@ -96,6 +103,7 @@ class App
     @rentals << rental
     puts "Rental created successfully\n\n"
   end
+
   def list_rentals
     puts "\nID of the Person: "
     list_persons
